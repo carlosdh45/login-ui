@@ -1,6 +1,6 @@
 ### `npm install`
 
-# you need to install node modules for the app 
+you need to install node modules for the app 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

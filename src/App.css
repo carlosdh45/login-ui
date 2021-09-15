@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* login page design code without the form component */
+.login-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://s3.invisionapp-cdn.com/storage.invisionapp.com/backgrounds/269251.jpg?x-amz-meta-iv=1&response-cache-control=max-age%3D2419200&x-amz-meta-ck=c8973aa2a9a8f8f185cc57604a15be1e&AWSAccessKeyId=AKIAWCDCF6QSLTS7LRWT&Expires=1633046400&Signature=n%2Bo3kBJ6OKwUSrB75zx593HEJmM%3D");
   min-height: 100vh;
+
+}
+
+.login-content{
+  display: flex;
+  height: 100vh;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+}
+
+.login-form{
+  background-color: #fff;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #384cff;
+  height: 100vh;
+  width: 30%;
+}
+
+.login-description h1{
+  color: #fff;
+  font-weight: 600;
+}
+.login-description p{
+  color: #fff;
+  padding: 0 15%;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.forms-content{
+  height: 70%;
+  width: 45%;
+}
+
+.forms-content h1{
+  text-align: left;
+  font-size: 37px;
+  font-weight: 650;
+}
+
+.signIn-quote{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.signIn-quote p{
+  text-align: left;
+  margin-right: 10px;
+  font-size: 18px;
+
+}
+
+.signIn-quote h3{
+  color: #384cff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.terms-quote{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  margin-top: 30px;
+}
+
+.terms-quote p{
+  text-align: left;
+  margin-right: 10px;
+  font-size: 15px;
+
+}
+
+.terms-quote span{
+  color: #384cff;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.formField{
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formField input{
+  width: 80%;
+  height: 35px;
+  border: 1px solid #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.submit{
+  width: 85%;
+  height: 45px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit:hover{
+  background-color: #384cff;
+  color: #fff;
+  transition: all 0.2s;
+  
+}
+
+.error{
+  color: #e22929;
+  margin: 0 0 5px 0;
+
+}
+
+.passwordReq{
+  margin-top: 5px;
+  font-size: 13px;
+  color: -internal-light-dark(black, white);
+}
+
+.dropdown{
+  width: 80%;
+  position: relative;
+  user-select: none;
+}
+
+.dropdown .dropdown-btn{
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  height: 35px;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown .dropdown-btn p{
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dropdown .dropdown-content{
+  position: absolute;
+  top: 103%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  width: 100%;
+}
+
+.dropdown .dropdown-content .dropdown-item{
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdown .dropdown-content .dropdown-item:hover{
+  background-color: #f4f4f4;
+}
+
+
+/* Responsive  */
+
+@media only screen and (max-width: 1000px) {
+  .login-container{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .login-content{
+    flex-direction: column;
+    width: 100%;
+  }
+  .login-form{
+    width: 100%;
+  }
+
+  .forms-content{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .login-description{
+    width: 100%;
   }
 }
